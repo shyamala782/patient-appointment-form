@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Appointment Form</title>
+    <link rel="stylesheet" href="appointment-form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <h2>Add New Patient</h2>
+            <button class="close-btn">&times;</button>
+        </div>
+        <div class="top-section">
+            <div class="select-patient-container">
+                <select id="selectPatient" class="form-control">
+                    <option value="">Select Patient</option>
+                </select>
+            </div>
+            <button class="new-patient-btn">+ New Patient</button>
+        </div>
+
+        <form id="appointmentForm" class="appointment-form">
+            <div class="form-row"> 
+                 <div class="form-group"> 
+   <label for="date">Date <span class="required">*</span></label> 
+  <input type="date" id="date" required>
+</div>
+<div class="form-group">
+                    <label for="timeRange">Time Range <span class="required">*</span></label>
+                    <input type="text" id="timeRange" placeholder="09:00 AM - 10:00 AM" required>
+                </div>
+                <div class="form-group">
+                    <label for="patientName">Patient Name <span class="required">*</span></label>
+                    <input type="text" id="patientName" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" class="form-control">
+                        <option value="">-Select-</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone <span class="required">*</span></label>
+                    <div class="phone-input-wrapper">
+                        <select id="countryCode" class="country-code-inline">
+                            <option value="+233">+233</option>
+                            <option value="+1">+1</option>
+                            <option value="+44">+44</option>
+                            <option value="+91">+91</option>
+                            <option value="+234">+234</option>
+                            <option value="+254">+254</option>
+                            <option value="+27">+27</option>
+                            <option value="+86">+86</option>
+                            <option value="+81">+81</option>
+                            <option value="+82">+82</option>
+                        </select>
+                        <input type="text" id="phone" class="phone-number-inline" placeholder="Enter phone number" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+               <div class="form-group">
+                    <label for="priority">Doctor</label>
+                    <select id="priority" class="form-control">
+                        <option value="">-Select-</option>
+                        <option value="normal">George William</option>
+                        <option value="normal">Helen Jones</option>
+                        <option value="urgent">Kofi Owusu Boahene</option>
+                        <option value="emergency">Akwasi Owusu</option>
+                        <option value="urgent">Samuel Mensah</option>
+                        <option value="emergency">Kofi Boahene</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="priority">Appointment Priority</label>
+                    <select id="priority" class="form-control">
+                        <option value="">-Select-</option>
+                        <option value="normal">Normal</option>
+                        <option value="urgent">Urgent</option>
+                        <option value="emergency">Emergency</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="liveConsultant">Live Consultant (On Video Conference) <span class="required">*</span></label>
+                    <select id="liveConsultant" class="form-control" required>
+                        <option value="">-Select-</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group full-width">
+                    <label for="symptoms">Symptoms</label>
+                    <textarea id="symptoms" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" class="form-control">
+                        <option value="">-Select-</option>
+                        <option value="pending">Pending</option>
+                        <option value="confirmed">Confirmed</option>
+                        <option value="completed">Completed</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+                </div>
+                <div class="form-group double-width">
+                    <label for="nurse">Nurse</label>
+                    <input type="text" id="nurse">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="caseId">case Id</label>
+                    <input type="text" id="caseId">
+                </div>
+                <div class="form-group">
+                    <label for="encounterId">Encounter Id</label>
+                    <input type="text" id="encounterId">
+                </div>
+                <div class="form-group">
+                    <label for="paymentMode">Payment Mode</label>
+                    <select id="paymentMode" class="form-control">
+                        <option value="">Cash</option>
+                        <option value="card">Card</option>
+                        <option value="insurance">Insurance</option>
+                        <option value="mobile">Mobile Money</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="paymentStatus">Payment Status</label>
+                    <select id="paymentStatus" class="form-control">
+                        <option value="">-Select-</option>
+                        <option value="paid">Paid</option>
+                        <option value="pending">Pending</option>
+                        <option value="unpaid">Unpaid</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="save-btn">Save</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Appointment Details</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div id="modalBody" class="modal-body"></div>
+            <div class="modal-footer">
+                <button class="modal-close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="appointment-form.js"></script>
+</body>
+</html> 
